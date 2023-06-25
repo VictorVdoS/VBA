@@ -1,0 +1,21 @@
+Sub Email()
+
+    Dim OutlookApp As Object
+    Dim OutlookMail As Object
+    
+    Set OutlookApp = CreateObject("Outlook.Application")
+    Set OutlookMail = OutlookApp.CreateItem(0)
+    
+    
+    With OutlookMail
+        .To = "Email@Email.com"
+        .Subject = "Subjec"
+        .Body = "Teste Teste"
+        .Send
+        
+    End With
+        
+    Set OutlookApp = Nothing
+    Set OutlookMail = Nothing
+    
+End Sub
